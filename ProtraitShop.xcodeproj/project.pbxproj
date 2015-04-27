@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725051AEEF62600BD09BC /* AppDelegate.swift */; };
+		DAD7250D1AEEF62600BD09BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD7250C1AEEF62600BD09BC /* Images.xcassets */; };
+		DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */; };
+		DAD7251C1AEEF62600BD09BC /* ProtraitShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7251B1AEEF62600BD09BC /* ProtraitShopTests.swift */; };
+		DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725261AEEFA1000BD09BC /* Alamofire.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAD725161AEEF62600BD09BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD724F81AEEF62600BD09BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD724FF1AEEF62600BD09BC;
+			remoteInfo = ProtraitShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAD725001AEEF62600BD09BC /* ProtraitShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtraitShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD725041AEEF62600BD09BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD725051AEEF62600BD09BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAD7250C1AEEF62600BD09BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DAD7250F1AEEF62600BD09BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DAD725151AEEF62600BD09BC /* ProtraitShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtraitShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD7251A1AEEF62600BD09BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD7251B1AEEF62600BD09BC /* ProtraitShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtraitShopTests.swift; sourceTree = "<group>"; };
+		DAD725261AEEFA1000BD09BC /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAD724FD1AEEF62600BD09BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD725121AEEF62600BD09BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAD724F71AEEF62600BD09BC = {
+			isa = PBXGroup;
+			children = (
+				DAD725021AEEF62600BD09BC /* ProtraitShop */,
+				DAD725251AEEFA1000BD09BC /* ThirdParty */,
+				DAD725181AEEF62600BD09BC /* ProtraitShopTests */,
+				DAD725011AEEF62600BD09BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAD725011AEEF62600BD09BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAD725001AEEF62600BD09BC /* ProtraitShop.app */,
+				DAD725151AEEF62600BD09BC /* ProtraitShopTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAD725021AEEF62600BD09BC /* ProtraitShop */ = {
+			isa = PBXGroup;
+			children = (
+				DAD725281AEEFD7000BD09BC /* Controllers */,
+				DAD7252C1AEEFD7000BD09BC /* Views */,
+				DAD7252B1AEEFD7000BD09BC /* Models */,
+				DAD7252A1AEEFD7000BD09BC /* Domains */,
+				DAD725051AEEF62600BD09BC /* AppDelegate.swift */,
+				DAD7250C1AEEF62600BD09BC /* Images.xcassets */,
+				DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */,
+				DAD725031AEEF62600BD09BC /* Supporting Files */,
+			);
+			path = ProtraitShop;
+			sourceTree = "<group>";
+		};
+		DAD725031AEEF62600BD09BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAD725041AEEF62600BD09BC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAD725181AEEF62600BD09BC /* ProtraitShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7251B1AEEF62600BD09BC /* ProtraitShopTests.swift */,
+				DAD725191AEEF62600BD09BC /* Supporting Files */,
+			);
+			path = ProtraitShopTests;
+			sourceTree = "<group>";
+		};
+		DAD725191AEEF62600BD09BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7251A1AEEF62600BD09BC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAD725251AEEFA1000BD09BC /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				DAD725261AEEFA1000BD09BC /* Alamofire.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		DAD725281AEEFD7000BD09BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7252E1AEF02F600BD09BC /* Home */,
+				DAD7252F1AEF02F600BD09BC /* Mine */,
+				DAD725301AEF02F600BD09BC /* Orders */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAD7252A1AEEFD7000BD09BC /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		DAD7252B1AEEFD7000BD09BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAD7252C1AEEFD7000BD09BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAD7252E1AEF02F600BD09BC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DAD7252F1AEF02F600BD09BC /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		DAD725301AEF02F600BD09BC /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAD724FF1AEEF62600BD09BC /* ProtraitShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD7251F1AEEF62600BD09BC /* Build configuration list for PBXNativeTarget "ProtraitShop" */;
+			buildPhases = (
+				DAD724FC1AEEF62600BD09BC /* Sources */,
+				DAD724FD1AEEF62600BD09BC /* Frameworks */,
+				DAD724FE1AEEF62600BD09BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProtraitShop;
+			productName = ProtraitShop;
+			productReference = DAD725001AEEF62600BD09BC /* ProtraitShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAD725141AEEF62600BD09BC /* ProtraitShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD725221AEEF62600BD09BC /* Build configuration list for PBXNativeTarget "ProtraitShopTests" */;
+			buildPhases = (
+				DAD725111AEEF62600BD09BC /* Sources */,
+				DAD725121AEEF62600BD09BC /* Frameworks */,
+				DAD725131AEEF62600BD09BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD725171AEEF62600BD09BC /* PBXTargetDependency */,
+			);
+			name = ProtraitShopTests;
+			productName = ProtraitShopTests;
+			productReference = DAD725151AEEF62600BD09BC /* ProtraitShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAD724F81AEEF62600BD09BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = NightWind;
+				TargetAttributes = {
+					DAD724FF1AEEF62600BD09BC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					DAD725141AEEF62600BD09BC = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DAD724FF1AEEF62600BD09BC;
+					};
+				};
+			};
+			buildConfigurationList = DAD724FB1AEEF62600BD09BC /* Build configuration list for PBXProject "ProtraitShop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAD724F71AEEF62600BD09BC;
+			productRefGroup = DAD725011AEEF62600BD09BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAD724FF1AEEF62600BD09BC /* ProtraitShop */,
+				DAD725141AEEF62600BD09BC /* ProtraitShopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAD724FE1AEEF62600BD09BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */,
+				DAD7250D1AEEF62600BD09BC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD725131AEEF62600BD09BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAD724FC1AEEF62600BD09BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */,
+				DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD725111AEEF62600BD09BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD7251C1AEEF62600BD09BC /* ProtraitShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAD725171AEEF62600BD09BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD724FF1AEEF62600BD09BC /* ProtraitShop */;
+			targetProxy = DAD725161AEEF62600BD09BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAD7250F1AEEF62600BD09BC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAD7251D1AEEF62600BD09BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAD7251E1AEEF62600BD09BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAD725201AEEF62600BD09BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProtraitShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAD725211AEEF62600BD09BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProtraitShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAD725231AEEF62600BD09BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProtraitShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtraitShop.app/ProtraitShop";
+			};
+			name = Debug;
+		};
+		DAD725241AEEF62600BD09BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProtraitShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtraitShop.app/ProtraitShop";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAD724FB1AEEF62600BD09BC /* Build configuration list for PBXProject "ProtraitShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD7251D1AEEF62600BD09BC /* Debug */,
+				DAD7251E1AEEF62600BD09BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD7251F1AEEF62600BD09BC /* Build configuration list for PBXNativeTarget "ProtraitShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD725201AEEF62600BD09BC /* Debug */,
+				DAD725211AEEF62600BD09BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAD725221AEEF62600BD09BC /* Build configuration list for PBXNativeTarget "ProtraitShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD725231AEEF62600BD09BC /* Debug */,
+				DAD725241AEEF62600BD09BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAD724F81AEEF62600BD09BC /* Project object */;
+}
