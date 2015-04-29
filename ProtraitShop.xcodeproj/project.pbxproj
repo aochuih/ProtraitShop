@@ -12,6 +12,10 @@
 		DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */; };
 		DAD7251C1AEEF62600BD09BC /* ProtraitShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7251B1AEEF62600BD09BC /* ProtraitShopTests.swift */; };
 		DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725261AEEFA1000BD09BC /* Alamofire.swift */; };
+		DAD725321AEF050E00BD09BC /* PSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725311AEF050E00BD09BC /* PSHomeViewController.swift */; };
+		DAD7253A1AF05F1700BD09BC /* PSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725391AF05F1700BD09BC /* PSTabBarController.swift */; };
+		DAD7253C1AF0620800BD09BC /* PSMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7253B1AF0620800BD09BC /* PSMineViewController.swift */; };
+		DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		DAD7251A1AEEF62600BD09BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD7251B1AEEF62600BD09BC /* ProtraitShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtraitShopTests.swift; sourceTree = "<group>"; };
 		DAD725261AEEFA1000BD09BC /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		DAD725311AEF050E00BD09BC /* PSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSHomeViewController.swift; sourceTree = "<group>"; };
+		DAD725391AF05F1700BD09BC /* PSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTabBarController.swift; path = ../../../../PSTabBarController.swift; sourceTree = "<group>"; };
+		DAD7253B1AF0620800BD09BC /* PSMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMineViewController.swift; sourceTree = "<group>"; };
+		DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +132,10 @@
 		DAD725281AEEFD7000BD09BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DAD725351AF05DF800BD09BC /* Common */,
 				DAD7252E1AEF02F600BD09BC /* Home */,
 				DAD7252F1AEF02F600BD09BC /* Mine */,
-				DAD725301AEF02F600BD09BC /* Orders */,
+				DAD725361AF05E4900BD09BC /* More */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 		DAD7252E1AEF02F600BD09BC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DAD725311AEF050E00BD09BC /* PSHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -162,15 +172,25 @@
 		DAD7252F1AEF02F600BD09BC /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				DAD7253B1AF0620800BD09BC /* PSMineViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
 		};
-		DAD725301AEF02F600BD09BC /* Orders */ = {
+		DAD725351AF05DF800BD09BC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DAD725391AF05F1700BD09BC /* PSTabBarController.swift */,
 			);
-			path = Orders;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DAD725361AF05E4900BD09BC /* More */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD7253C1AF0620800BD09BC /* PSMineViewController.swift in Sources */,
 				DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */,
 				DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */,
+				DAD7253A1AF05F1700BD09BC /* PSTabBarController.swift in Sources */,
+				DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */,
+				DAD725321AEF050E00BD09BC /* PSHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
