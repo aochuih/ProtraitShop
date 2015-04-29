@@ -46,6 +46,7 @@
 		DAD7253B1AF0620800BD09BC /* PSMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMineViewController.swift; sourceTree = "<group>"; };
 		DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMoreViewController.swift; sourceTree = "<group>"; };
 		DAD725401AF06B0A00BD09BC /* PSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTabBarController.swift; sourceTree = "<group>"; };
+		DAD725421AF06BCD00BD09BC /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 				DAD7252C1AEEFD7000BD09BC /* Views */,
 				DAD7252B1AEEFD7000BD09BC /* Models */,
 				DAD7252A1AEEFD7000BD09BC /* Domains */,
+				DAD725421AF06BCD00BD09BC /* BridgingHeader.h */,
 				DAD725051AEEF62600BD09BC /* AppDelegate.swift */,
 				DAD7250C1AEEF62600BD09BC /* Images.xcassets */,
 				DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */,
@@ -480,6 +482,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ProtraitShop/BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -492,6 +495,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ProtraitShop/BridgingHeader.h";
 			};
 			name = Release;
 		};
