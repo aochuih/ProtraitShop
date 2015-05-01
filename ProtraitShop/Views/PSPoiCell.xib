@@ -19,7 +19,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苏打草莓" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boV-pf-I6n" userLabel="nameLabel">
-                    <rect key="frame" x="128" y="8" width="464" height="29"/>
+                    <rect key="frame" x="128" y="8" width="412" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -36,10 +36,17 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店家忙" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZy-aM-P8f" userLabel="busyLabel">
+                    <rect key="frame" x="556" y="15" width="36" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="boV-pf-I6n" secondAttribute="trailing" constant="8" id="5w0-ZZ-rSJ"/>
+                <constraint firstItem="boV-pf-I6n" firstAttribute="centerY" secondItem="bZy-aM-P8f" secondAttribute="centerY" id="4HK-qD-0Cw"/>
+                <constraint firstAttribute="trailing" secondItem="boV-pf-I6n" secondAttribute="trailing" constant="60" id="5w0-ZZ-rSJ"/>
                 <constraint firstAttribute="bottom" secondItem="U1N-7Z-wcZ" secondAttribute="bottom" id="E7H-Mo-aha"/>
                 <constraint firstItem="UwQ-UZ-QSr" firstAttribute="leading" secondItem="U1N-7Z-wcZ" secondAttribute="trailing" constant="8" id="G0w-D4-wB2"/>
                 <constraint firstAttribute="trailing" secondItem="UwQ-UZ-QSr" secondAttribute="trailing" constant="8" id="GWD-cc-wtz"/>
@@ -49,6 +56,7 @@
                 <constraint firstItem="WP4-HV-2oj" firstAttribute="leading" secondItem="U1N-7Z-wcZ" secondAttribute="trailing" constant="10" id="d9m-hZ-UQC"/>
                 <constraint firstItem="boV-pf-I6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="ff4-ad-3QR"/>
                 <constraint firstItem="UwQ-UZ-QSr" firstAttribute="top" secondItem="boV-pf-I6n" secondAttribute="bottom" constant="10" id="iCC-p9-kkV"/>
+                <constraint firstAttribute="trailing" secondItem="bZy-aM-P8f" secondAttribute="trailing" constant="8" id="jo7-rq-G7p"/>
                 <constraint firstItem="boV-pf-I6n" firstAttribute="leading" secondItem="U1N-7Z-wcZ" secondAttribute="trailing" constant="8" id="lMj-RE-Hg5"/>
             </constraints>
             <variation key="default">
@@ -61,6 +69,7 @@
                 <outlet property="nameLabel" destination="boV-pf-I6n" id="omF-p8-XiL"/>
                 <outlet property="poiImageView" destination="U1N-7Z-wcZ" id="zje-Py-yTK"/>
                 <outlet property="priceLabel" destination="WP4-HV-2oj" id="opR-Nx-kzh"/>
+                <outlet property="statusLabel" destination="bZy-aM-P8f" id="w9V-C1-f5B"/>
             </connections>
         </view>
     </objects>

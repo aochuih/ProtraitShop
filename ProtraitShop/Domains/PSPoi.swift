@@ -8,13 +8,28 @@
 
 import Foundation
 
+enum PoiStatusType: Int {
+    case Open = 0, Busy = 1, Close = 2
+    
+    func description() -> String {
+        switch self {
+        case .Open:
+            return ""
+        case .Busy:
+            return "店家忙"
+        case .Close:
+            return ""
+        }
+    }
+}
+
 class PSPoi: AnyObject {
     var ID: Int!
     var name: String!
     var logoUrl: String!
     var description: String!
     var priceZone: String!
-    var status: Int
+    var status: PoiStatusType!
     
     init() {
         ID = 0
@@ -22,7 +37,7 @@ class PSPoi: AnyObject {
         logoUrl = ""
         description = ""
         priceZone = ""
-        status = 0
+        status = .Open
     }
     
     init(dictionary: NSDictionary) {
@@ -31,6 +46,7 @@ class PSPoi: AnyObject {
         logoUrl = dictionary["logo"] as! String
         description = dictionary["intro"] as! String
         priceZone = dictionary["price"] as! String
-        status = dictionary["status"] as! Int
-    }
+        status = PoiStatusType(rawValue: dictionary["status"]!.integerValue)
+    }                                                                  
+    
 }

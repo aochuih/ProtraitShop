@@ -55,6 +55,8 @@ class PSHomeViewController : UIViewController, UITableViewDataSource, UITableVie
             cell.nameLabel.text = poi.name
             cell.descriptionLabel.text = poi.description
             cell.priceLabel.text = poi.priceZone
+            cell.statusLabel.text = poi.status.description()
+            cell.statusLabel.hidden = (poi.status == PoiStatusType.Busy || poi.status == PoiStatusType.Close)
         }
         
         return cell

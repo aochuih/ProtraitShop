@@ -15,6 +15,7 @@ class PSPoiCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var statusLabel: UILabel!
     
 }
 
