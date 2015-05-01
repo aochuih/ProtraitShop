@@ -26,7 +26,13 @@ class PSHomeViewController : UIViewController, UITableViewDataSource, UITableVie
         
         poiService = PSPoiService()
         poiService.fetchPoiList("") {
-            (poiArray , _) in
+            (poiArray , error) in
+            if error != nil {
+                var alertView = UIAlertView(title: "出错了", message: error!.userInfo?["message"] as? String, delegate: nil, cancelButtonTitle: "好的")
+                alertView.show()
+                return
+            }
+            
             self.poiArray = poiArray
             self.tableView.reloadData()
         }
