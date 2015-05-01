@@ -23,19 +23,19 @@ enum PoiStatusType: Int {
     }
 }
 
-class PSPoi: AnyObject {
+class PSPoi: NSObject {
     var ID: Int!
     var name: String!
     var logoUrl: String!
-    var description: String!
+    var introduction: String!
     var priceZone: String!
     var status: PoiStatusType!
     
-    init() {
+    override init() {
         ID = 0
         name = ""
         logoUrl = ""
-        description = ""
+        introduction = ""
         priceZone = ""
         status = .Open
     }
@@ -44,7 +44,7 @@ class PSPoi: AnyObject {
         ID = dictionary["id"] as! Int
         name = dictionary["name"] as! String
         logoUrl = dictionary["logo"] as! String
-        description = dictionary["intro"] as! String
+        introduction = dictionary["intro"] as! String
         priceZone = dictionary["price"] as! String
         status = PoiStatusType(rawValue: dictionary["status"]!.integerValue)
     }                                                                  

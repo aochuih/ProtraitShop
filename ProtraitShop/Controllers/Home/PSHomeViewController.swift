@@ -53,7 +53,7 @@ class PSHomeViewController : UIViewController, UITableViewDataSource, UITableVie
             var poi = poiArray[indexPath.row]
             cell.poiImageView.sd_setImageWithURL(NSURL(string: poi.logoUrl))
             cell.nameLabel.text = poi.name
-            cell.descriptionLabel.text = poi.description
+            cell.descriptionLabel.text = poi.introduction
             cell.priceLabel.text = poi.priceZone
             cell.statusLabel.text = poi.status.description()
             cell.statusLabel.hidden = (poi.status == PoiStatusType.Busy || poi.status == PoiStatusType.Close)
