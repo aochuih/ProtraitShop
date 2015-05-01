@@ -23,6 +23,11 @@ enum PoiStatusType: Int {
     }
 }
 
+enum PSPhotoType {
+    case PhotoProtrait(ID: Int, name: String, price: Float)
+    case PhotoFullSize(ID: Int, name: String, price: Float)
+}
+
 class PSPoi: NSObject {
     var ID: Int!
     var name: String!
@@ -30,6 +35,12 @@ class PSPoi: NSObject {
     var introduction: String!
     var priceZone: String!
     var status: PoiStatusType!
+    var supportPhotoTypes: [PSPhotoType]?
+    var score: Float?
+    var gallery: [String]?
+    var readme: String?
+    var commentCount: Int?
+    var comments: [PSPoiComment]?
     
     override init() {
         ID = 0
@@ -47,6 +58,31 @@ class PSPoi: NSObject {
         introduction = dictionary["intro"] as! String
         priceZone = dictionary["price"] as! String
         status = PoiStatusType(rawValue: dictionary["status"]!.integerValue)
-    }                                                                  
+        
+        score = dictionary["score"] as? Float
+        readme = dictionary["readMe"] as? String
+        if let galleryDictionaries = (dictionary["gallery"] as? [NSDictionary]) {
+            galleryDictionaries.map {
+                $0 as! String
+            }
+        }
+        
+        if let types = (dictionary["type"] as? [NSDictionary]) {
+            supportPhotoTypes = types.map {
+                var ID = $0["id"] as! Int
+                if ID == 0 {
+                    return PSPhotoType.PhotoProtrait(ID: $0["id"]! as! Int, name: $0["name"]! as! String, price: $0["price"]! as! Float)
+                } else {
+                    return PSPhotoType.PhotoFullSize(ID: $0["id"]! as! Int, name: $0["name"]! as! String, price: $0["price"]! as! Float)
+                }
+            }
+        }
+        
+        if let commentDictionaries = (dictionary["comments"] as? [NSDictionary]) {
+            comments = commentDictionaries.map {
+                PSPoiComment(dictionary: ($0 as NSDictionary))
+            }
+        }
+    }
     
 }
