@@ -17,6 +17,10 @@
 		DAD7253C1AF0620800BD09BC /* PSMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7253B1AF0620800BD09BC /* PSMineViewController.swift */; };
 		DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */; };
 		DAD725411AF06B0A00BD09BC /* PSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725401AF06B0A00BD09BC /* PSTabBarController.swift */; };
+		DAD725441AF1BEB000BD09BC /* PSPoiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD725431AF1BEB000BD09BC /* PSPoiCell.xib */; };
+		DAD725481AF2293600BD09BC /* PSPoiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725471AF2293600BD09BC /* PSPoiCell.swift */; };
+		DAD7254B1AF22CAE00BD09BC /* PSPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7254A1AF22CAE00BD09BC /* PSPoi.swift */; };
+		DAD7254D1AF31FA600BD09BC /* PSPoiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		DAD7253D1AF0621A00BD09BC /* PSMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMoreViewController.swift; sourceTree = "<group>"; };
 		DAD725401AF06B0A00BD09BC /* PSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTabBarController.swift; sourceTree = "<group>"; };
 		DAD725421AF06BCD00BD09BC /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		DAD725431AF1BEB000BD09BC /* PSPoiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSPoiCell.xib; sourceTree = "<group>"; };
+		DAD725471AF2293600BD09BC /* PSPoiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiCell.swift; sourceTree = "<group>"; };
+		DAD7254A1AF22CAE00BD09BC /* PSPoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoi.swift; sourceTree = "<group>"; };
+		DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 		DAD7252A1AEEFD7000BD09BC /* Domains */ = {
 			isa = PBXGroup;
 			children = (
+				DAD7254A1AF22CAE00BD09BC /* PSPoi.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 		DAD7252B1AEEFD7000BD09BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +176,8 @@
 		DAD7252C1AEEFD7000BD09BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAD725431AF1BEB000BD09BC /* PSPoiCell.xib */,
+				DAD725471AF2293600BD09BC /* PSPoiCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD725441AF1BEB000BD09BC /* PSPoiCell.xib in Resources */,
 				DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */,
 				DAD7250D1AEEF62600BD09BC /* Images.xcassets in Resources */,
 			);
@@ -354,10 +367,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD725411AF06B0A00BD09BC /* PSTabBarController.swift in Sources */,
+				DAD7254B1AF22CAE00BD09BC /* PSPoi.swift in Sources */,
 				DAD7253C1AF0620800BD09BC /* PSMineViewController.swift in Sources */,
 				DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */,
+				DAD725481AF2293600BD09BC /* PSPoiCell.swift in Sources */,
 				DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */,
 				DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */,
+				DAD7254D1AF31FA600BD09BC /* PSPoiService.swift in Sources */,
 				DAD725321AEF050E00BD09BC /* PSHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
