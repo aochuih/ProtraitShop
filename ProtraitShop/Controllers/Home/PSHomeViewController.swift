@@ -53,12 +53,25 @@ class PSHomeViewController : UIViewController, UITableViewDataSource, UITableVie
             var poi = poiArray[indexPath.row]
             cell.poiImageView.sd_setImageWithURL(NSURL(string: poi.logoUrl))
             cell.nameLabel.text = poi.name
-            cell.descriptionLabel.text = poi.introduction
+            if count(poi.introduction) > 20 {
+                var intro = poi.introduction.substringToIndex(advance(poi.introduction.startIndex,19)) + "..."
+                cell.descriptionLabel.text = intro
+            } else {
+                cell.descriptionLabel.text = poi.introduction
+            }
             cell.priceLabel.text = poi.priceZone
             cell.statusLabel.text = poi.status.description()
             cell.statusLabel.hidden = (poi.status == PoiStatusType.Busy || poi.status == PoiStatusType.Close)
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        
+        var poiDetailViewController = PSPoiDetailViewController()
+        poiDetailViewController.poi = poiArray[indexPath.row]
+        navigationController?.pushViewController(poiDetailViewController, animated: true)
     }
 }

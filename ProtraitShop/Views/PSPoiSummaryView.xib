@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PSPoiSummaryView" customModule="ProtraitShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="介绍: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqq-b5-05I" userLabel="introLabel">
+                    <rect key="frame" x="8" y="8" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptq-A7-KmA" userLabel="priceLabel">
+                    <rect key="frame" x="8" y="33" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKx-h6-X4R" userLabel="priceValueLabel">
+                    <rect key="frame" x="56" y="33" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评价: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWK-s5-nTs" userLabel="starLabel">
+                    <rect key="frame" x="8" y="58" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-Ur-h7j" userLabel="starValueLabel">
+                    <rect key="frame" x="56" y="58" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jWK-s5-nTs" firstAttribute="top" secondItem="ptq-A7-KmA" secondAttribute="bottom" constant="4" id="0f6-dH-p0A"/>
+                <constraint firstItem="jqq-b5-05I" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="AkI-Q0-o7X"/>
+                <constraint firstItem="jWK-s5-nTs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="LKg-LW-tS7"/>
+                <constraint firstItem="FKx-h6-X4R" firstAttribute="leading" secondItem="ptq-A7-KmA" secondAttribute="trailing" constant="4" id="VFq-je-Hva"/>
+                <constraint firstItem="ptq-A7-KmA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="cGi-Xk-ooE"/>
+                <constraint firstItem="jWK-s5-nTs" firstAttribute="centerY" secondItem="Qf3-Ur-h7j" secondAttribute="centerY" id="esz-R5-97r"/>
+                <constraint firstItem="Qf3-Ur-h7j" firstAttribute="leading" secondItem="jWK-s5-nTs" secondAttribute="trailing" constant="4" id="gey-He-RNp"/>
+                <constraint firstItem="jqq-b5-05I" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="kwL-pW-GcZ"/>
+                <constraint firstItem="ptq-A7-KmA" firstAttribute="top" secondItem="jqq-b5-05I" secondAttribute="bottom" constant="4" id="moM-Iq-zGx"/>
+                <constraint firstItem="FKx-h6-X4R" firstAttribute="centerY" secondItem="ptq-A7-KmA" secondAttribute="centerY" id="poY-tD-RKA"/>
+            </constraints>
+            <connections>
+                <outlet property="introductionLabel" destination="jqq-b5-05I" id="JPF-nk-zT8"/>
+                <outlet property="priceValueLabel" destination="FKx-h6-X4R" id="Uda-rk-wO6"/>
+                <outlet property="starValueLabel" destination="Qf3-Ur-h7j" id="McG-Na-fIZ"/>
+            </connections>
+        </view>
+    </objects>
+</document>

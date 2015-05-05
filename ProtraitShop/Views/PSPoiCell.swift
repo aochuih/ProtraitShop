@@ -17,5 +17,8 @@ class PSPoiCell: UITableViewCell {
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
 }
 

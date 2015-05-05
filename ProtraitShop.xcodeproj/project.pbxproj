@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		53CEA3C12755472D181E0D6A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB79ACC13F1EC1ECD93C8E79 /* libPods.a */; };
 		DABAAC401AF3B16800032D3D /* PSPoiComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAAC3F1AF3B16800032D3D /* PSPoiComment.swift */; };
+		DABAAC421AF3B76A00032D3D /* PSPoiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAAC411AF3B76A00032D3D /* PSPoiDetailViewController.swift */; };
+		DABAAC441AF3B9EB00032D3D /* PSPoiSummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DABAAC431AF3B9EB00032D3D /* PSPoiSummaryView.xib */; };
+		DABAAC461AF3BC5200032D3D /* PSPoiSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAAC451AF3BC5200032D3D /* PSPoiSummaryView.swift */; };
+		DABAAC4C1AF3CC8F00032D3D /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAAC4B1AF3CC8F00032D3D /* UIViewAdditions.swift */; };
 		DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725051AEEF62600BD09BC /* AppDelegate.swift */; };
 		DAD7250D1AEEF62600BD09BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD7250C1AEEF62600BD09BC /* Images.xcassets */; };
 		DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD7250E1AEEF62600BD09BC /* LaunchScreen.xib */; };
@@ -39,6 +43,10 @@
 		757FDE72D05420CFD687C69D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AB79ACC13F1EC1ECD93C8E79 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABAAC3F1AF3B16800032D3D /* PSPoiComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiComment.swift; sourceTree = "<group>"; };
+		DABAAC411AF3B76A00032D3D /* PSPoiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiDetailViewController.swift; sourceTree = "<group>"; };
+		DABAAC431AF3B9EB00032D3D /* PSPoiSummaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSPoiSummaryView.xib; sourceTree = "<group>"; };
+		DABAAC451AF3BC5200032D3D /* PSPoiSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiSummaryView.swift; sourceTree = "<group>"; };
+		DABAAC4B1AF3CC8F00032D3D /* UIViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
 		DAD725001AEEF62600BD09BC /* ProtraitShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtraitShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD725041AEEF62600BD09BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD725051AEEF62600BD09BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DABAAC471AF3CC1A00032D3D /* Pending */ = {
+			isa = PBXGroup;
+			children = (
+				DABAAC4B1AF3CC8F00032D3D /* UIViewAdditions.swift */,
+			);
+			path = Pending;
+			sourceTree = "<group>";
+		};
 		DAD724F71AEEF62600BD09BC = {
 			isa = PBXGroup;
 			children = (
@@ -179,8 +195,11 @@
 		DAD7252C1AEEFD7000BD09BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DABAAC471AF3CC1A00032D3D /* Pending */,
 				DAD725431AF1BEB000BD09BC /* PSPoiCell.xib */,
 				DAD725471AF2293600BD09BC /* PSPoiCell.swift */,
+				DABAAC431AF3B9EB00032D3D /* PSPoiSummaryView.xib */,
+				DABAAC451AF3BC5200032D3D /* PSPoiSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD725311AEF050E00BD09BC /* PSHomeViewController.swift */,
+				DABAAC411AF3B76A00032D3D /* PSPoiDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -317,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD725441AF1BEB000BD09BC /* PSPoiCell.xib in Resources */,
+				DABAAC441AF3B9EB00032D3D /* PSPoiSummaryView.xib in Resources */,
 				DAD725101AEEF62600BD09BC /* LaunchScreen.xib in Resources */,
 				DAD7250D1AEEF62600BD09BC /* Images.xcassets in Resources */,
 			);
@@ -373,10 +394,13 @@
 				DAD7254B1AF22CAE00BD09BC /* PSPoi.swift in Sources */,
 				DAD7253C1AF0620800BD09BC /* PSMineViewController.swift in Sources */,
 				DABAAC401AF3B16800032D3D /* PSPoiComment.swift in Sources */,
+				DABAAC421AF3B76A00032D3D /* PSPoiDetailViewController.swift in Sources */,
 				DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */,
 				DAD725481AF2293600BD09BC /* PSPoiCell.swift in Sources */,
 				DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */,
 				DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */,
+				DABAAC4C1AF3CC8F00032D3D /* UIViewAdditions.swift in Sources */,
+				DABAAC461AF3BC5200032D3D /* PSPoiSummaryView.swift in Sources */,
 				DAD7254D1AF31FA600BD09BC /* PSPoiService.swift in Sources */,
 				DAD725321AEF050E00BD09BC /* PSHomeViewController.swift in Sources */,
 			);
