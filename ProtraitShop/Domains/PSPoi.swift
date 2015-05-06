@@ -61,13 +61,9 @@ class PSPoi: NSObject {
         
         score = dictionary["score"] as? Float
         readme = dictionary["readMe"] as? String
-        if let galleryDictionaries = (dictionary["gallery"] as? [NSDictionary]) {
-            galleryDictionaries.map {
-                $0 as! String
-            }
-        }
+        gallery = dictionary["gallery"] as? [String]
         
-        if let types = (dictionary["type"] as? [NSDictionary]) {
+        if let types = (dictionary["ware"] as? [NSDictionary]) {
             supportPhotoTypes = types.map {
                 var ID = $0["id"] as! Int
                 if ID == 0 {

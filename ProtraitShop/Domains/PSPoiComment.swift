@@ -25,7 +25,7 @@ class PSPoiComment: NSObject {
     init(dictionary: NSDictionary) {
         ID = dictionary["id"] as! Int
         name = dictionary["name"] as! String
-        ctime = dictionary["ctime"] as! String
+        ctime = dictionary["time"] as! String
         content = dictionary["content"] as! String
         
         if let picDictionaries = (dictionary["pics"] as? [NSDictionary]) {

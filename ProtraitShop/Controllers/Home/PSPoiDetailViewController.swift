@@ -22,9 +22,10 @@ class PSPoiDetailViewController: UIViewController, UITableViewDelegate, UITableV
         title = poi.name
         cellDictionary = NSDictionary()
         poiService = PSPoiService()
-        poiService.getPoiDetail("") {
+        poiService.getPoiDetail("", poiID: String(stringInterpolationSegment:poi.ID)) {
             (poiDetail, error) in
             self.poi = poiDetail
+            self.reloadData()
         }
         
         contentScrollView = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, view.bounds.height))
@@ -34,9 +35,6 @@ class PSPoiDetailViewController: UIViewController, UITableViewDelegate, UITableV
         summaryView = PSPoiSummaryView.loadFrmNib() as! PSPoiSummaryView
         summaryView.frame = CGRectMake(0, 0, view.bounds.width, 200)
         contentScrollView.addSubview(summaryView)
-        summaryView.introductionLabel.text = poi.introduction
-        summaryView.priceValueLabel.text = poi.priceZone
-        summaryView.starValueLabel.text = String(stringInterpolationSegment: poi.score!)
         galleryTableView = UITableView(frame: view.bounds, style: UITableViewStyle.Plain)
         galleryTableView.contentOffset = CGPointMake(0, summaryView.bounds.size.height)
         galleryTableView.backgroundColor = UIColor.clearColor()
@@ -50,21 +48,30 @@ class PSPoiDetailViewController: UIViewController, UITableViewDelegate, UITableV
         
         summaryView.frame.origin = CGPointMake(0, self.topLayoutGuide.length)
         galleryTableView.frame.origin = CGPointMake(0, summaryView.frame.origin.y + summaryView.bounds.size.height)
-        var lastCell = galleryTableView.cellForRowAtIndexPath(NSIndexPath(forItem: poi.gallery!.count-1, inSection: 0))
-        var lastCellBottom: CGFloat = 200.0
-        if (lastCell != nil) {
-            lastCellBottom = lastCell!.frame.origin.y + lastCell!.bounds.height
+        if let gallery = poi.gallery {
+            var lastCell = galleryTableView.cellForRowAtIndexPath(NSIndexPath(forItem: poi.gallery!.count-1, inSection: 0))
+            var lastCellBottom: CGFloat = 200.0
+            if (lastCell != nil) {
+                lastCellBottom = lastCell!.frame.origin.y + lastCell!.bounds.height
+            }
+            contentScrollView.contentSize = CGSizeMake(view.bounds.width, lastCellBottom)
         }
-        contentScrollView.contentSize = CGSizeMake(view.bounds.width, lastCellBottom)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func reloadData()
+    {
+        summaryView.introductionLabel.text = poi.introduction
+        summaryView.priceValueLabel.text = poi.priceZone
+        summaryView.starValueLabel.text = String(stringInterpolationSegment: poi.score!)
+        galleryTableView.reloadData()
     }
     
     // TableView DataSource & Delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poi.gallery!.count
+        if let gallery = poi.gallery {
+            return poi.gallery!.count
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
