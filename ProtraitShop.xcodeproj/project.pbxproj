@@ -26,6 +26,7 @@
 		DAD725481AF2293600BD09BC /* PSPoiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD725471AF2293600BD09BC /* PSPoiCell.swift */; };
 		DAD7254B1AF22CAE00BD09BC /* PSPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7254A1AF22CAE00BD09BC /* PSPoi.swift */; };
 		DAD7254D1AF31FA600BD09BC /* PSPoiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */; };
+		DAD8E6161AFDA98200DC64F0 /* PSBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E6151AFDA98200DC64F0 /* PSBaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		DAD725471AF2293600BD09BC /* PSPoiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiCell.swift; sourceTree = "<group>"; };
 		DAD7254A1AF22CAE00BD09BC /* PSPoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoi.swift; sourceTree = "<group>"; };
 		DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPoiService.swift; sourceTree = "<group>"; };
+		DAD8E6151AFDA98200DC64F0 /* PSBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSBaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		DAD7252B1AEEFD7000BD09BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DAD8E6151AFDA98200DC64F0 /* PSBaseService.swift */,
 				DAD7254C1AF31FA600BD09BC /* PSPoiService.swift */,
 			);
 			path = Models;
@@ -397,6 +400,7 @@
 				DABAAC421AF3B76A00032D3D /* PSPoiDetailViewController.swift in Sources */,
 				DAD725271AEEFA1000BD09BC /* Alamofire.swift in Sources */,
 				DAD725481AF2293600BD09BC /* PSPoiCell.swift in Sources */,
+				DAD8E6161AFDA98200DC64F0 /* PSBaseService.swift in Sources */,
 				DAD725061AEEF62600BD09BC /* AppDelegate.swift in Sources */,
 				DAD7253E1AF0621A00BD09BC /* PSMoreViewController.swift in Sources */,
 				DABAAC4C1AF3CC8F00032D3D /* UIViewAdditions.swift in Sources */,

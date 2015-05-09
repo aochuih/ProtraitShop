@@ -54,7 +54,7 @@ class PSPoi: NSObject {
     init(dictionary: NSDictionary) {
         ID = dictionary["id"] as! Int
         name = dictionary["name"] as! String
-        logoUrl = dictionary["logo"] as! String
+        logoUrl = (dictionary["logo_url"] as! String) + "/" + (dictionary["logo_key"] as! String)
         introduction = dictionary["intro"] as! String
         priceZone = dictionary["price"] as! String
         status = PoiStatusType(rawValue: dictionary["status"]!.integerValue)

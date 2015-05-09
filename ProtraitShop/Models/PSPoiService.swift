@@ -8,26 +8,17 @@
 
 import UIKit
 
-class PSPoiService: NSObject {
+class PSPoiService: PSBaseService {
     
     func fetchPoiList(userName: String, completionHandler: ([PSPoi], NSError?) -> Void) {
-        request(Method.POST, "http://103.249.252.238/api/v1/shopList/", parameters: [:]).responseJSON { (_, _, JSON, respondError) in
-            if let error = respondError {
-                completionHandler([], error)
-                return;
+        requestForJsonRespond(Method.POST, path: "api/v1/shopList/", parameters: [:]) {
+            (resultDictionary, respondError) in
+            
+            if (respondError != nil) {
+                completionHandler([], respondError)
             }
             
-            let jsonDictionary = JSON as! NSDictionary
-            let code = jsonDictionary["code"] as! Int
-            let message = jsonDictionary["message"] as! String
-            if (code != 0) {
-                var error = NSError(domain: "com.nightwind.protraitshop.service.error", code: code, userInfo: ["message" : message])
-                completionHandler([], error)
-                return
-            }
-            
-            
-            let poiArray: [PSPoi] = (JSON! as! [NSDictionary]).map {
+            let poiArray: [PSPoi] = (resultDictionary!["data"] as! [NSDictionary]).map {
                 PSPoi(dictionary: ($0 as NSDictionary))
             }
             completionHandler(poiArray,nil)
@@ -35,22 +26,14 @@ class PSPoiService: NSObject {
     }
     
     func getPoiDetail(userID: String, poiID: String, completionHandler:(poiDetail: PSPoi?, NSError?) -> Void) {
-        request(Method.POST, "http://103.249.252.238/api/v1/shopDetail/", parameters: [ "userId": userID, "id": poiID]).responseJSON { (_, _, JSON, respondError) in
-            if let error = respondError {
-                completionHandler(poiDetail:nil, error)
-                return;
+        requestForJsonRespond(Method.POST, path: "api/v1/shopDetail/", parameters: [ "userId": userID, "id": poiID]) {
+            (resultDictionary, respondError) in
+            
+            if (respondError != nil) {
+                completionHandler(poiDetail: nil, respondError)
             }
             
-            let jsonDictionary = JSON as! NSDictionary
-            let code = jsonDictionary["code"] as! Int
-            let message = jsonDictionary["message"] as! String
-            if (code != 0) {
-                var error = NSError(domain: "com.nightwind.protraitshop.service.error", code: code, userInfo: ["message" : message])
-                completionHandler(poiDetail:nil, error)
-                return
-            }
-            
-            var poiDetail = PSPoi(dictionary: (JSON! as! NSDictionary))
+            var poiDetail = PSPoi(dictionary: resultDictionary!)
             completionHandler(poiDetail: poiDetail, nil)
         }
     }
